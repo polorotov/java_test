@@ -4,10 +4,6 @@ public class Entity {
     private byte damageMin, damageMax;
     short healthMax;
     short healthCurrent;
-    short healHealthValue;
-
-    short maxReceivedDamage = 0;
-    private static final byte HEAL_HEALTH_PERCENT = 30;
 
     private static final byte ATTACK_MIN = 1;
     private static final byte ATTACK_MAX = 30;
@@ -22,8 +18,6 @@ public class Entity {
         this.setProtection(protection);
         this.setDamage(damageMin, damageMax);
         this.setHealth(health);
-
-        this.healHealthValue = (short) (healthMax * HEAL_HEALTH_PERCENT / 100);
     }
 
     public void receiveAttack(short damage) {
